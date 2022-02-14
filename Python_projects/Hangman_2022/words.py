@@ -1,0 +1,25 @@
+word_list = [
+    "house"
+    "bob"
+    "carpet"
+    "hair"
+    "napkins"
+    "fingers"
+    "face"
+    "Watch"
+    "object"
+    "computer"
+    "disk"
+    "pizza"
+    "lassaña"
+    "mirrow"
+    "desk"
+    "frame"
+    "keyboard"
+    "card"
+    "television"
+    "door"
+    "car"
+
+
+]
