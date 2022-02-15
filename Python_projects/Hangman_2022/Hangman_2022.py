@@ -1,130 +1,51 @@
-from curses.ascii import isalpha
 import random
-form words import word_list
-
-
+from threading import BrokenBarrierError
+import time
+from words import word_list
 
 def run():
-   
-   def get_word():
+
+   name = input("Please introduce your name: ")
+   time.sleep(1)
+   print("Hi, " + name + " Its time for some Hangman!!!")
+   time.sleep(1)
+   print("its time to guess!!!")
+   time.sleep(1)
+
+   def word(word_list):
       word = random.choice(word_list)
       return word.upper()
 
+   user_word =''
+   lifes=5
 
-   def play(word):
-      word_completion = "_" * len(word)
-      guessed = False
-      guessed_letters = []
-      guessed_words = []
-      tries = 7
-      print("lets play hangman!!!")
-      print(displayed_hangman(tries))
-      print("\n")
-      while not guessed and tries > 0:
-         guess = input ("please guess a letter for this word: ").upper()
-         if len(guess) == 1 and guess.isalpha():
-         
-         elif len(guess) == len(word) and guess.isalpha
+   while lifes > 0:
+      fails = 0
+      for letter in word:
+         if letter in user_word:
+            print(letter,end='')    
+         else: 
+            print(" _ ", end="")
+            fails = fails + 1
+      
+      if fails == 0:
+         print("You are a !!! W I N N E R !!!")
+         time.sleep(2)
+         print("!!thanks for playing!!")
+         break
+      
+      user_letter = input("Please type a letter: ")
+      user_word += user_letter
 
+      if user_letter not in word:
+         vidas -= 1
+         print("the letter you choose isent in this word, try again")
+         time.sleep(2)
+         print("You have "+ lifes +" more")
 
-
-
+   else:
+      print("thanks for playing!!!")
    
-
-
-
-   def displayed_hangman(tries):
-      stages = ["""
-
-               --------------------
-               ---------V----------
-                        |
-                        |
-                        0
-                      \ | /
-                        |
-                       /?\
-                      /   \ 
-               ""","""
-
-               --------------------
-               ---------V----------
-                        |
-                        |
-                        0
-                      \ | /
-                        |
-                       /?
-                      /    
-               """,
-               """
-
-               --------------------
-               ---------V----------
-                        |
-                        |
-                        0
-                      \ | /
-                        |
-
-
-
-               ""","""
-
-               --------------------
-               ---------V----------
-                        |
-                        |
-                        0
-                      \ | 
-                        |
-
-                      
-                        
-               """,
-               """
-
-               --------------------
-               ---------V----------
-                        |
-                        |
-                        0
-                        | 
-                        |
-
-                      
-                        
-               """,
-               """
-
-               --------------------
-               ---------V----------
-                        |
-                        |
-                        0
-                        
-
-
-                      
-                        
-               ""","""
-
-               --------------------
-               ---------V----------
-                        |
-                       
-
-                     
-                        
-                        
-
-                      
-                        
-               """]
-
-
-
-
 
 if __name__=="__main__":
     run()
