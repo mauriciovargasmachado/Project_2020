@@ -3,6 +3,11 @@ from threading import BrokenBarrierError
 import time
 from words import word_list
 
+def word(word_list):
+   word = random.choice(word_list)
+   return word.upper()
+
+
 def run():
 
    name = input("Please introduce your name: ")
@@ -12,16 +17,12 @@ def run():
    print("its time to guess!!!")
    time.sleep(1)
 
-   def word(word_list):
-      word = random.choice(word_list)
-      return word.upper()
-
-   user_word =''
+   user_word =""
    lifes=5
 
    while lifes > 0:
       fails = 0
-      for letter in word:
+      for letter in word(word_list):
          if letter in user_word:
             print(letter,end='')    
          else: 
@@ -37,11 +38,11 @@ def run():
       user_letter = input("Please type a letter: ")
       user_word += user_letter
 
-      if user_letter not in word:
-         vidas -= 1
+      if user_letter not in word(word_list):
+         lifes -= 1
          print("the letter you choose isent in this word, try again")
          time.sleep(2)
-         print("You have "+ lifes +" more")
+         print("You have "+ str(lifes) +" more")
 
    else:
       print("thanks for playing!!!")
