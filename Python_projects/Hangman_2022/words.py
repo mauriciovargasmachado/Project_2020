@@ -1,4 +1,3 @@
 word_list = [
-    "house"
-
+    "house", "Car", "nabukodonozor", "power", "pain", "programing", "almost","done"
 ]

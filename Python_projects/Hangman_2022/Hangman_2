@@ -40,3 +40,5 @@ while not done:
     for letter in word:
          if letter.upper() not in guesses:
             done = False
+     
+                  
