@@ -68,18 +68,18 @@ console.groupEnd()
 
 // integration with HTML
 
-function A(){
+function buttonA(){
     const input = document.getElementById("input_square");
     const value = input.value;
 
-    const perimeter =square_perimeter(value)
+    const perimeter =square_perimeter(value);
     alert(perimeter);
 }
 
-function B(){
+function buttonB(){
     const input = document.getElementById("input_square");
     const value = input.value;
 
-    const area =square_area(value)
+    const area =square_area(value);
     alert(area);
 }
