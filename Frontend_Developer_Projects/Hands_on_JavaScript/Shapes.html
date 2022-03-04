@@ -12,9 +12,32 @@
     <title class="text1">Geometric Shapes</title>
 </head>
 <body>
-    <h1 class="text2">
-        This is a test
-    </h1>
+    <header>
+        <h1>
+            Geometric Figures
+        </h1>
+        <p>
+            This is a test program integrating HTML, CSS and JavaScript.
+        </p>
+
+    </header>
+
+    <section>
+        <h2>
+            Calculate the perimeter and area of area of any square
+        </h2>
+        <form>
+            <label for ="input_square">
+                Please add how the size of if side of your square: 
+
+                <input id="input_square" type="number" placeholder="Please write here" />
+
+                <button type="button" onclick="A()">Calculate the perimeter</button>
+
+                <button type="button" onclick="B()">Calculate the area</button>           
+            </label>
+        </form>
+    </section>
     <script src="./Shapes.js"></script>
 </body>
 </html>
