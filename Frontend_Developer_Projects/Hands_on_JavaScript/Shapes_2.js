@@ -28,7 +28,7 @@ console.group("Triangles");
 
 
 function triangle_perimeter(base,side_1,side_2){
-    return (base + side_1 + side_2);
+    return base + side_1 + side_2;
 }
 
 triangle_perimeter ();
@@ -72,14 +72,64 @@ function buttonA(){
     const input = document.getElementById("input_square");
     const value = input.value;
 
-    const perimeter =square_perimeter(value);
-    alert(perimeter);
+    const s_perimeter =square_perimeter(value);
+    alert(s_perimeter);
 }
 
 function buttonB(){
     const input = document.getElementById("input_square");
     const value = input.value;
 
-    const area =square_area(value);
-    alert(area);
+    const s_area =square_area(value);
+    alert(s_area);
+}
+
+//integration HTML triangle
+
+function buttonC(){
+    const input_1 = document.getElementById("input_triangle_1");
+    const input_2 = document.getElementById("input_triangle_2"); 
+    const input_3 = document.getElementById("input_triangle_3");
+    
+    const base = input_1.value;
+    const side_1 = input_2.value;
+    const side_2 = input_3.value;
+    
+
+    const t_perimeter =triangle_perimeter(base,side_1,side_2);
+    alert(t_perimeter);
+
+    }
+
+function buttonD(){
+    const input_1 = document.getElementById("input_triangle_1");
+    const input_4 = document.getElementById("triangle_height");
+    const value_1 = input_1.value;
+    const value_4 = input_4.value;
+
+    const t_area =triangle_area(value_1,value_4);
+    alert(t_area);
+}
+
+
+//integration HTML circle
+
+function buttonE(){
+    const input_5 = document.getElementById("input_circle");
+    
+    const value_5 = input_5.value;
+       
+    const c_perimeter =circle_perimeter(value_5);
+    alert(c_perimeter);
+
+    }
+
+function buttonF(){
+    const input_5 = document.getElementById("input_circle");
+    
+    const value_5 = input_5.value;
+       
+    const c_area =circle_area(value_5);
+    alert(c_area);
+    
 }
