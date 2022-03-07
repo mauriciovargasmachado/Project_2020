@@ -28,13 +28,13 @@ console.group("Triangles");
 
 
 function triangle_perimeter(base,side_1,side_2){
-    return base + side_1 + side_2;
+    return parseInt(base) + parseInt(side_1) + parseInt(side_2);
 }
 
 triangle_perimeter ();
 
 function triangle_area(base,height){
-    return base * height;
+    return (base * height)/2;
 }
 
 
