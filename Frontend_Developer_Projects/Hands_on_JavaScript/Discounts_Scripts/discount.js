@@ -9,17 +9,15 @@ function final_price(price, discount){
     
 }
 
-function on_click_show_final_price(){
+function push_button(){
 
-    const input_price = document.getElementById(input_price);
-    const price_value = input_price.value;
-
-    const input_discount= document.getElementById(input_discount);
-    const discount_value = input_discount.value;
-
-    const discount_price = final_price(price_value,discount_value);
+    const A = document.getElementById("P").value;
+    const B = document.getElementById("D").value;
+    const discount_price = final_price(A,B);
+    console.log(discount_price);
 }
 
-const result = document.getElementById("resultP");
-result.innerText = "The final price is: " + discount_price();
+const n = discount_price;
+document.getElementById("resultP").innerHTML = n;
+    
 

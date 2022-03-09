@@ -124,27 +124,35 @@
         <p1>
             Click the button to get your the price after discounts
         </p1>
-        <p2 id="resultP">
+        
+        <br />
 
-        </p2>
+        <p2 id="resultP"></p2>
+        
         <form>
 
-            <label for="input_price"></label>
-            <input id="input_price" type="number"/>
+            <label for="P"></label>
+            <input id="P" type="number"/>
+
+            <br />
             
-            <label for="input_discount"></label>
-            <input id="input_discount" type="number"/>
+            <label for="D"></label>
+            <input id="D" type="number"/>
+
+            <br />
             
-            <button type="button" onclick="on_click_show_final_price">
+            <button type="button" onclick="push_button()">
                 CALCULATE
             </button>
+
+            
         
         </form>
     <h1>
-        Claculate here your final amount to pay!!!
-        <script src="./discount.js"></script>
+        Calculate here your final amount to pay!!!
     </h1>
-    
+  
     </header>
+  <script src="./discount.js"></script>
 </body>
 </html>
